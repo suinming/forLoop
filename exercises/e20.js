@@ -7,7 +7,21 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+let result = [[], []]
+    for(const name of array){
+        let isHaveA = false
+        for(const char of name){
+            if(char === 'a'){
+                result[0].push(name)
+                isHaveA = true
+                break;
+            } 
+        }
+        if(!isHaveA){
+            result[1].push(name)
+        }
+    }
+    return result
 }
 
 
