@@ -7,7 +7,27 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
-
+  let result = []
+    for(const item of array){
+        let calBalance 
+        let calDeposit = 0
+        let calWithdraw= 0
+        if(item.deposits){
+            for(const num of item.deposits){
+                calDeposit += num
+            }
+        }
+        if(item.withdrawals){
+            for(const num of item.withdrawals){
+                calWithdraw += num
+            }
+        }
+        calBalance = calDeposit - calWithdraw 
+        if(item.balance !== calBalance){
+            result.push(item)
+        }
+    }
+    return result
 }
 
 

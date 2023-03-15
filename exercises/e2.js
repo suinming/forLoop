@@ -4,7 +4,14 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
-
+  let count = 0
+  let array = []
+  while (count * count <= max) {
+      let square = count * count
+      array.push(square)
+      count += 1
+  }
+    return array
 }
 
 // === TEST YOURSELF ===

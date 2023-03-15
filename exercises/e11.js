@@ -6,7 +6,19 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  let result = []
+    for(const item of array){
+        let sum = 0
+        if(item.withdrawals){
+            for(const num of item.withdrawals){
+                sum += num
+            }
+            result.push(sum)
+        } else{
+            result.push(0)
+        }
+    }
+    return result
 }
 
 // === TEST YOURSELF ===

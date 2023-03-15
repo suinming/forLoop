@@ -5,7 +5,16 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-
+  const result = []
+    for(const item of array){
+        for(const char of item.name){
+            if(char.toLowerCase() === letter.toLowerCase()){
+                result.push(item.name)
+                break;
+            }
+        }
+    }
+    return result
 }
 
 // === TEST YOURSELF ===

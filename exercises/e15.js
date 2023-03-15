@@ -6,7 +6,16 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
-
+  let result = []
+  let loopNum = arr1.length + arr2.length
+    for(let i=0; i<loopNum;i++){
+        if(i >= arr1.length){
+            result.push(arr2[i - arr1.length])
+        }else{
+            result.push(arr1[i])
+        }
+    }
+    return result
 }
 
 
